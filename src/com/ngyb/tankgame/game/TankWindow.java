@@ -98,7 +98,7 @@ public class TankWindow extends Window {
                 }
             }
         } catch (Exception e) {
-            System.out.println("======"+e.getLocalizedMessage());
+            System.out.println("======" + e.getLocalizedMessage());
             e.printStackTrace();
         }
     }

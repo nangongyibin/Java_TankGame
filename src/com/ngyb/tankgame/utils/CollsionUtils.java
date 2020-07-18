@@ -17,10 +17,10 @@ public class CollsionUtils {
      * @param y1 第一个矩形的y坐标
      * @param w1 第一个矩形的宽度
      * @param h1 第一个矩形的高度
-     * @param x2 第二个矩形的x坐标 
-     * @param y2 第二个矩形的y坐标 
-     * @param w2 第二个矩形的宽度  
-     * @param h2 第二个矩形的高度  
+     * @param x2 第二个矩形的x坐标
+     * @param y2 第二个矩形的y坐标
+     * @param w2 第二个矩形的宽度
+     * @param h2 第二个矩形的高度
      * @return
      */
     public static boolean isCollsionWidthRect(int x1, int y1, int w1, int h1, int x2, int y2, int w2, int h2) {

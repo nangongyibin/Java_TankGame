@@ -13,7 +13,7 @@ import com.sun.org.apache.bcel.internal.generic.NEW;
  */
 public class Game {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         TankWindow tw = new TankWindow(
                 Config.title,
                 Config.width,
