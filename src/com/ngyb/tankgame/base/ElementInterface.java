@@ -7,5 +7,5 @@ package com.ngyb.tankgame.base;
  * 日期：2020/7/18 15:28
  */
 public interface ElementInterface {
-    public void onDraw();
+    void onDraw();
 }

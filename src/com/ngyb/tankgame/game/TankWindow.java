@@ -37,7 +37,7 @@ public class TankWindow extends Window {
         tank = new Tank(Config.width / 2 - 32, Config.height - 64);
         lists.add(tank);
         for (int i = 0; i < 14; i++) {
-            lists.add(new Lawn(i * 64 + 64, 64 * 1));
+            lists.add(new Lawn(i * 64 + 64, 64));
         }
     }
 
@@ -77,24 +77,29 @@ public class TankWindow extends Window {
 
     @Override
     protected void onDisplayUpdate() {
-        for (int i = 0; i < lists.size(); i++) {
-            lists.get(i).onDraw();
-        }
-        for (ElementInterface element : lists) {
-            if (element instanceof Bullet) {
-                boolean isTransgression = ((Bullet) element).isTransgression();
-                if (isTransgression) {
-                    lists.remove(element);
+        try {
+            for (int i = 0; i < lists.size(); i++) {
+                lists.get(i).onDraw();
+            }
+            for (ElementInterface element : lists) {
+                if (element instanceof Bullet) {
+                    boolean isTransgression = ((Bullet) element).isTransgression();
+                    if (isTransgression) {
+                        lists.remove(element);
+                    }
                 }
             }
-        }
-        for (ElementInterface elementInterface : lists) {
-            if (elementInterface instanceof SteelPlate) {
-                boolean isBump = tank.isBump((SteelPlate) elementInterface);
-                if (isBump) {
+            for (ElementInterface elementInterface : lists) {
+                if (elementInterface instanceof SteelPlate) {
+                    boolean isBump = tank.isBump((SteelPlate) elementInterface);
+                    if (isBump) {
 
+                    }
                 }
             }
+        } catch (Exception e) {
+            System.out.println("======"+e.getLocalizedMessage());
+            e.printStackTrace();
         }
     }
 }

@@ -49,7 +49,7 @@ public abstract class Window {
         initGL();
         //创建时的回调
         onCreate();
-        while (running && Display.isCloseRequested()) {
+        while (running && !Display.isCloseRequested()) {
             GL11.glClear(GL11.GL_COLOR_BUFFER_BIT);
             //处理用户交互处理
             processInput();

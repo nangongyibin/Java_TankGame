@@ -8,7 +8,7 @@ import com.ngyb.tankgame.game.Config;
  * 邮箱：nangongyibin@gmail.com
  * 日期：2020/7/18 15:30
  */
-public abstract class Element implements ElementInterface{
+public abstract class Element implements ElementInterface {
     protected int x;
     protected int y;
     protected int w;
